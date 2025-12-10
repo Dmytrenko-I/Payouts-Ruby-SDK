@@ -1,10 +1,6 @@
-lib = File.expand_path('lib', __dir__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'core/version'
-
 Gem::Specification.new do |spec|
   spec.name        = 'paypal-payouts-sdk'
-  spec.version     = PayPal::VERSION
+  spec.version     = '1.0.2'
   spec.summary     = "This repository contains PayPal's Ruby SDK for Payouts REST API"
   spec.description = "This repository contains PayPal's Ruby SDK for Payouts REST API"
   spec.authors     = ['http://developer.paypal.com']
@@ -14,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.files = Dir['lib/**/*', 'README*', 'LICENSE*', '*.gemspec']
   spec.bindir        = 'exe'
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.executables   = []
   spec.require_paths = ['lib']
 
   spec.add_dependency 'paypalhttp', '~> 2.0'
